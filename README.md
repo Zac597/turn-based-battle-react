@@ -1,73 +1,48 @@
-# React + TypeScript + Vite
+# Turn-Based Battle Game 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um mini jogo de batalha por turnos inspirado em RPGs clássicos (como Pokémon),
+desenvolvido com **React** e **TypeScript**
 
-Currently, two official plugins are available:
+O objetivo do projeto foi praticar lógica de jogo, controle de estadoe fluxo de turnos usando tecnologias do dia a dia no meu desenvolvimento web.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Mecânicas do jogo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-Combate por turnos entre Player e Inimigo
+-Player possui:
+  -HP
+  -Stamina
+  -Ataque fraco (baixo custo)
+  -Ataque forte (alto custo)
+  -Defesa (reduz dano e recupera stamina)
+-Inimigo:
+  -Atacar automaticamente a cada turno
+-O jogo termina quando o HP de um dos lados chega a zero
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tecnólogias usadas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+-React
+-TypeScript
+-Vite
+-Hooks (`useState`, `useEffect`)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## O que eu aprendi com esse projeto
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+-Modelagem de estado para jogos
+-Controle de turnos e regras de negócio
+-Organização de llógica separada da UI
+-Debug de problemas reais de renderização
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## Como rodar o projeto
+
+````bash
+npm install
+npm run dev
