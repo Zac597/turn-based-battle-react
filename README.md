@@ -7,6 +7,10 @@ O objetivo do projeto foi praticar lógica de jogo, controle de estadoe fluxo de
 
 ---
 
+## Versões
+
+-v0.1 - Sistemas básico de combate por turnos
+
 ## Mecânicas do jogo
 
 -Combate por turnos entre Player e Inimigo
